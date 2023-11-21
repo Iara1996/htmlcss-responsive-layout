@@ -1,25 +1,26 @@
-/* # REGION COMMON */
+/* #region common */
 
 *
 {
     padding: 0;
-    margin: auto;
+    margin: 0;
     box-sizing: border-box;
 }
 
 :root
 {
-    --res-dark: black;
+    --res-dark: #333333;
+    --res-black: black;
     --res-white: white;
-    --res-accent: rgba(151,146,228,1);
+    --res-accent: #9792e4;
     --res-primary: #0085fc;
-    --res-secondary: rgba(255,254,254,1); 
+    --res-secondary: #b5ddff; 
 }
 
 
-/* # ENDREGION COMMON */
+/* #endregion common */
 
-/* # REGION UTILITY */
+/* #region utility */
 .container
 {
     width: 80%;
@@ -34,6 +35,16 @@
     margin: 0 -1rem;
 }
 
+.d_flex
+{
+    display: flex;
+}
+
+.justify_content_between
+{
+    justify-content: space-between;
+}
+
 [class^="col-"]
 {
     padding: 1rem;
@@ -42,6 +53,11 @@
 .col-4
 {
     width: calc((100%/12)*4);
+}
+
+.col-6
+{
+    width: calc((100%/12)*6);
 }
 
 .col-8
@@ -53,16 +69,18 @@
 {
     width: 100%;
 }
-/* # ENDREGION UTILITY */
+/* #endregion utility */
 
-/* # REGION DEBUG */
-.debug header
+/* #region debug */
+
+/* .debug header
 {
-    height: 80px;
-}
+     height: 80px; 
+}   */
+
 .debug main
 {
-    height: 2000px;
+    min-height: 2000px;
     background-color: greenyellow;
 }
 
@@ -71,26 +89,128 @@
     height: 300px;
 }
 
-/* # ENDREGION DEBUG */
+.debug [class^="col-"]
+{
+    border: solid 1px red;
+    min-height: 200px;
+}
+
+.debug .testimonials .avatar
+{
+    background-color: darkblue;
+}
+
+/* #endregion debug */
 
 
-/* # REGION HEADER */
+/* #region header */
 header
 {
     background-color: var(--res-primary);
+    padding: 0.75rem 0;
 }
 
-/* # ENDREGION HEADER */
+/* #endregion header */
 
-/* # REGION MAIN */
-/* # ENDREGION MAIN */
+/* #region main */
 
-/* # REGION FOOTER */
+.planning, .benefits
+{
+    background-color: var(--res-accent);
+}
+
+.testimonials .card
+{
+    min-height: 150px;
+    background-color: var(--res-accent);
+    margin: 1rem 0;
+    border-radius: 1rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+.testimonials .avatar
+{
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    flex-shrink: 0; /* in questo modo il cerchio  non si restringe quanto mettiamo il testo */
+
+}
+.testimonials .text
+{
+    padding: 1 rem;
+}
+
+/* #endregion main*/
+
+/* #region footer */
 footer
 {
     background-color: var(--res-dark);
 }
-/* # ENDREGION FOOTER */
+/* #endregion footer */
+
+/* #region responsive */
+@media screen and (min-width: 768px) 
+{
+   .col-md-4
+   {
+    width: calc(100%/12*4);
+   }
+
+   .col-md-5
+   {
+    width: calc(100%/12*5);
+   }
+
+   .col-md-6
+   {
+    width: 50%;
+   }
+
+   .col-md-7
+   {
+    width: calc(100%/12*7);
+   }
+
+   .col-md-8
+   {
+    width: calc(100%/12*8);
+   }
+
+   .col-md-12
+   {
+    width: 100%;
+   }
+    
+}
+
+@media screen and (min-width: 1024px) 
+{
+   .col-lg-4
+   {
+    width: calc(100%/12*4);
+   }
+
+   .col-lg-6
+   {
+    width: 50%;
+   }
+
+   .col-lg-8
+   {
+    width: calc(100%/12*8);
+   }
+
+   .col-lg-12
+   {
+    width: 100%;
+   }
+    
+}
+/* #endregion responsive */
+
 
 
 
