@@ -12,10 +12,14 @@
     --res-dark: black;
     --res-white: white;
     --res-accent: rgba(151,146,228,1);
-    --res-primary: rgba(181,221,255,1);
+    --res-primary: #0085fc;
     --res-secondary: rgba(255,254,254,1); 
 }
 
+
+/* # ENDREGION COMMON */
+
+/* # REGION UTILITY */
 .container
 {
     width: 80%;
@@ -49,25 +53,43 @@
 {
     width: 100%;
 }
-
-
-
-
-
-
-
-/* # ENDREGION COMMON */
-
-/* # REGION UTILITY */
 /* # ENDREGION UTILITY */
 
+/* # REGION DEBUG */
+.debug header
+{
+    height: 80px;
+}
+.debug main
+{
+    height: 2000px;
+    background-color: greenyellow;
+}
+
+.debug footer
+{
+    height: 300px;
+}
+
+/* # ENDREGION DEBUG */
+
+
 /* # REGION HEADER */
+header
+{
+    background-color: var(--res-primary);
+}
+
 /* # ENDREGION HEADER */
 
 /* # REGION MAIN */
 /* # ENDREGION MAIN */
 
 /* # REGION FOOTER */
+footer
+{
+    background-color: var(--res-dark);
+}
 /* # ENDREGION FOOTER */
 
 
